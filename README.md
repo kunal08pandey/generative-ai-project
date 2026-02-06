@@ -21,13 +21,18 @@ python examples/basic_completion.py
 generative_ai_project/
 ├── config/
 ├── src/
+│   ├── api/
+│   │   ├── routes/
 │   ├── llm/
+│   ├── llm/
+│   ├── rag/
 │   ├── prompt_engineering/
 │   ├── utils/
 │   └── handlers/
 ├── data/
 ├── examples/
 ├── notebooks/
+├── tests/
 ├── requirements.txt
 ├── setup.py
 ├── README.md

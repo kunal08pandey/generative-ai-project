@@ -1,3 +1,10 @@
 pyyaml
 python-dotenv
 requests
+fastapi
+uvicorn
+faiss-cpu
+chromadb
+sentence-transformers
+pytest
+httpx
