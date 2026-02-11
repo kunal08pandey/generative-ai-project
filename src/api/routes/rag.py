@@ -7,7 +7,7 @@ router = APIRouter()
 
 class RagRequest(BaseModel):
     question: str
-
+@router.post("/")
 def rag(request: RagRequest):
     context = retrieve_context(request.question)
     llm = GPTClient(api_key="dummy-key")
