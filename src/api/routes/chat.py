@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from src.llm.gpt_client import GPTClient
+from src.llm.ollama_client import OllamaClient
 
 router = APIRouter()
 
@@ -9,7 +9,10 @@ class ChatRequest(BaseModel):
 
 @router.post("/")
 def chat(request: ChatRequest):
-    llm = GPTClient(api_key="dummy-key")
+    client = OllamaClient()
     response = client.generate(request.prompt)
-    return {"response": response}
+    return {
+        "role": "assistant",
+        "content": response  # raw markdown text
+    }
 

@@ -8,3 +8,4 @@ chromadb
 sentence-transformers
 pytest
 httpx
+requests
